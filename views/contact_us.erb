@@ -1,0 +1,18 @@
+<form action='/contact_us' method='get'>
+  Name: <input type='text' name='name'/>
+  Email: <input type='email' name='email'/>
+  Message: <input type='text' name='message'/>
+  <button>Submit</button>
+</form>
+
+<% if @name && @email && @message %>
+<section>
+  <header>
+    <h1>Thanks!</h1>
+  </header>
+  <p>Thanks for contacting us, <%= @name %>.</p>
+  <p>We'll reply to "<%= @email %>" soon.</p>
+  <hr/>
+  <p>Your message: <%= @message %></p>
+</section>
+<% end %>
